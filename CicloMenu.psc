@@ -29,10 +29,50 @@ Algoritmo CicloMenu
 				Leer numero2
 				resultado = numero1 + numero2
 				Escribir "El resultado es: ", resultado
-				Escribir "Presione enter para continuar..."
+				Escribir "Presione enter para continuar... "
+				Esperar Tecla				
+			FinSi
+			si respuesta == 2 Entonces
+				Escribir "+++++++ Restar ++++++++"
+				Escribir "Ingrese 1er número"
+				Leer numero1
+				Escribir "Ingrese 2do número"
+				Leer numero2
+				resultado = numero1 - numero2
+				Escribir "El resultado es: ", resultado
+				Escribir "Presione enter para continuar... "
+				Esperar Tecla				
+			FinSi
+			si respuesta == 3 Entonces
+				Escribir "+++++++ Multiplicar ++++++++"
+				Escribir "Ingrese 1er número"
+				Leer numero1
+				Escribir "Ingrese 2do número"
+				Leer numero2
+				resultado = numero1 * numero2
+				Escribir "El resultado es: ", resultado
+				Escribir "Presione enter para continuar... "
 				Esperar Tecla				
 			FinSi
 			
+			si respuesta == 4 Entonces
+				Escribir "+++++++ Restar ++++++++"
+				Escribir "Ingrese 1er número"
+				Leer numero1
+				Escribir "Ingrese 2do número"
+				Leer numero2
+				
+				si numero2 = 0 Entonces
+					Escribir "No se puede dividir por cero"
+				sino	
+					resultado = numero1 / numero2
+					Escribir "El resultado es: ", resultado				
+				FinSi
+				
+				Escribir "Presione enter para continuar... "
+				Esperar Tecla				
+			FinSi
+			// + - * /
 		FinSi
 	FinMientras
 	
