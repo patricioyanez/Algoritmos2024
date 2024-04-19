@@ -3,7 +3,6 @@
 
 nombre = input("Ingrese su nombre: ")
 apellido = input("Ingrese su apellido: ")
-
 print("\n\n**** usando OR  *******")
 if nombre != "" or apellido != "":
     print(f"Hola {nombre} {apellido}")
