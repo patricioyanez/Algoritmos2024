@@ -6,7 +6,7 @@ try:
     dividendo = int(dividendo)
     divisor = int(divisor)
     cociente = dividendo / divisor
-    print("El resultado es: ", cociente1 )
+    print("El resultado es: ", cociente )
 except NameError: # se Ejecuta cuando la variable no fue definida
      print("La variable no existe")
 except ZeroDivisionError:
