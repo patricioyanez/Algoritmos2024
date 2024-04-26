@@ -35,7 +35,7 @@ while opcion != "0":
         elif opcion == "3":
             resultado = numero1 * numero2
             print("El resultado es: ", resultado )
-        if opcion == "4":
+        elif opcion == "4":
             resultado = numero1 / numero2
             print("El resultado es: ", resultado )
 
