@@ -16,6 +16,8 @@ while opcion != "0":
     if opcion not in ["0", "1", "2","3", "4", "5"]:
         print("La opción no es válida")
     else:
+        if opcion == "0":
+            break
         # opciones correctas
         # pedir los numeros y verificar que sean int
         try:
@@ -36,7 +38,12 @@ while opcion != "0":
             resultado = numero1 * numero2
             print("El resultado es: ", resultado )
         elif opcion == "4":
-            resultado = numero1 / numero2
-            print("El resultado es: ", resultado )
-
+            try:
+                resultado = numero1 / numero2
+                print("El resultado es: ", resultado )
+            except:
+                print("No es posible la división")
+        elif opcion == "5":
+            print("agregar codigo :)")
     input("Presione enter para continuar....")
+print("Aplicación cerrada....")
