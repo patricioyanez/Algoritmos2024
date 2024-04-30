@@ -8,12 +8,15 @@ cantidadOtros = 0
 cantidadNino = 0
 cantidadJoven= 0
 cantidadAdulto=0
+# agregar opcion de mostrar resultados
+# agregar validación de genero
+# resetear los valores ingresados
 
 while opcion != "2":
     os.system("cls") # clean screen
     # opciones del programa
     print("***** Gym El Mamado *****")
-    print("1.- Ingreso de datos")
+    print("1.- Ingreso de datos") 
     print("2.- Salir")
     # solicitar al usuario opción a ejecutar
     opcion = input("Ingrese la opción: ")
@@ -61,4 +64,4 @@ while opcion != "2":
         elif genero == "3":
             cantidadOtros += 1
 
-        
+
