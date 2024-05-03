@@ -25,11 +25,12 @@ while opcion != "2":
     if opcion not in ["1","2"]:
         print("La opción no es válida :(")
         input("Presione enter para continuar....")
+
     else:
         if opcion == "2":
             break
 
-        print("Ingrese los siguietes datos")
+        print("==== Ingrese los siguietes datos ====")
         edad = input("EDAD: ")
         genero= input("Seleccione género:\n (1)Hombre\n (2)Mujer\n (3)Otro\n Ingrese opción: ")
 
@@ -38,7 +39,10 @@ while opcion != "2":
         except:
             print("La edad no es válida")
             input("Presione enter para continuar...")
-            continue
+            continue # se devuelve al menú
+#
+# Validar que las opciones del genero sean valida. Enviar mensaje si no es correcto
+#
 
         # la edad fue ingresada correctamente
         if edad >= 10 and edad <= 17:            
@@ -64,4 +68,10 @@ while opcion != "2":
         elif genero == "3":
             cantidadOtros += 1
 
+#
+# Agregar una opción que permita ver los resultados capturados hasta el momento
+#
 
+#
+# Resetear los valores registrados por las variables
+#
