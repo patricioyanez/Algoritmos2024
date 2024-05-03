@@ -41,7 +41,7 @@ while opcion != "2":
             input("Presione enter para continuar...")
             continue # se devuelve al menú
 #
-# Validar que las opciones del genero sean valida. Enviar mensaje si no es correcto
+# 1.- Validar que las opciones del genero sean valida. Enviar mensaje si no es correcto
 #
 
         # la edad fue ingresada correctamente
@@ -69,9 +69,9 @@ while opcion != "2":
             cantidadOtros += 1
 
 #
-# Agregar una opción que permita ver los resultados capturados hasta el momento
+# 2.- Agregar una opción que permita ver los resultados capturados hasta el momento
 #
 
 #
-# Resetear los valores registrados por las variables
+# 3.- Resetear los valores registrados por las variables
 #
