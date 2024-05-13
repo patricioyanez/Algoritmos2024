@@ -39,6 +39,16 @@ numeros.sort()
 print(numeros)
 
 # agregar un 8 y ordenar 
-# de mayor a menor
+# de mayor a menor y mostrar
 
+numeros.append(8)
+numeros.sort()
+numeros.reverse()
+print(numeros)
 
+# crear una aplicación
+# que permita almacenar las
+# notas que el usuario
+# determine
+# dar la opcion de ingreso,
+# promediar y salir
