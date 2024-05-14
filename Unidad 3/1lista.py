@@ -46,9 +46,7 @@ numeros.sort()
 numeros.reverse()
 print(numeros)
 
-# crear una aplicación
-# que permita almacenar las
-# notas que el usuario
-# determine
-# dar la opcion de ingreso,
-# promediar y salir
+# crear una aplicación      # que permita almacenar las
+# notas que el usuario      # determine
+# dar la opcion de ingreso, # promediar, 
+# mostrar o listar todas las notas ingresadas y salir
