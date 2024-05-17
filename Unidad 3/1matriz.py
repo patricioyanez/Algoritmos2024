@@ -47,5 +47,10 @@ print("El valor de la m3d:", matriz3D[1][1][3])
 matriz3D[2][1][3] = "te pille"
 
 #Ejercicio: recorer la matriz 3d anterior:
+print("=== *** ejercicio")
+for dimension in matriz3D:
+    for fila in dimension:
+        for columna in fila:
+            print("EL valor es:", columna)
 
 
