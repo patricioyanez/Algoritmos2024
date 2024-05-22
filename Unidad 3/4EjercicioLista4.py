@@ -30,8 +30,8 @@ while opcion != "5":
 
         usuarios.append(usuario)
         claves.append(clave)
-    if opcion == "4":
-        for i in range(len(usuarios)):
+    if opcion == "4": # len permite contar la cantidad de caracteres
+        for i in range(len(usuarios)): # range es para entregar una secuencia numerica
             print(f"Usuario: {usuarios[i]}, Clave: { claves[i]}")
         input("Presione enter para continuar....")
         continue
