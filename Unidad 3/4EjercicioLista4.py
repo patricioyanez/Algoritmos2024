@@ -27,6 +27,7 @@ while opcion != "5":
             if usuario == usuarios[indice]:
                 if clave == claves[indice]:
                     estaElUsuarioRegistrado = True
+                    break
 
         if estaElUsuarioRegistrado:
             print(f"=========> Bienvenido {usuario} :)")
@@ -50,8 +51,32 @@ while opcion != "5":
         print("El Usuario fue guardado con éxito")
         input("Presione enter para continuar....")
 
+    if opcion == "3":
+        print("|********* Eliminar usuarios *********|")
+        usuario = input("Ingrese nombre de usuario:")
+        clave   = input("Ingrese clave del usuario:")
+        usuarioEncontrado = False
+        indiceUsuario = -1
+        for indice in range(len(usuarios)):
+            if usuario == usuarios[indice]:
+                if clave == claves[indice]:
+                    usuarioEncontrado = True
+                    indiceUsuario = indice
+                    break
+        if usuarioEncontrado:
+            usuarios.pop(indiceUsuario) # elimina elemento
+            del claves[indiceUsuario] # elimina elemento
+            print("Usuario eliminado")
+        else:
+            print("Usuario no encontrado")
+        input("Presione enter para continuar....")
+
     if opcion == "4": # len permite contar la cantidad de caracteres
-        for i in range(len(usuarios)): # range es para entregar una secuencia numerica
-            print(f"Usuario: {usuarios[i]}, Clave: { claves[i]}")
+        if len(usuarios) == 0:
+            print("No hay usuarios registrados")
+        else:
+            print("****** LISTADO DE USUARIOS *******")
+            for i in range(len(usuarios)): # range es para entregar una secuencia numerica
+                print(f"Usuario: {usuarios[i]}, Clave: { claves[i]}")
         input("Presione enter para continuar....")
         continue
