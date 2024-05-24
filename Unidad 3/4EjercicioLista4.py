@@ -2,6 +2,8 @@ import os
 opcion = ""
 usuarios = [] # si es una colección definir nombre en plural
 claves = []
+
+# REALIZAR EL EJERCICIO 5 DE LA ACTIVIDAD 3.1.2
 while opcion != "5":
     os.system("cls")
     print("=== Menú ===")
