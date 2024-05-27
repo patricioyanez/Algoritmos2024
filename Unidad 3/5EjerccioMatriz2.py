@@ -11,6 +11,13 @@ matriz = [
             [37,38,39,40]
         ]
 
+
+
+filas = 10
+columnas = 10
+valor = 1
+matriz = [[valor + j + i*columnas for j in range(columnas)] for i in range(filas)]
+
 datos = ""
 for fila in matriz:
     for indice in range(len(fila)):
