@@ -14,7 +14,7 @@ for valor in tupla:
 
 miConjunto = {1,2,3,4,5,6, 1,2,3,4,5,6}
 print("**** Conjunto ****")
-
+print(miConjunto)
 # agregar elementos
 miConjunto.add(7)
 miConjunto.add(1)
