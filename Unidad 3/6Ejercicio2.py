@@ -3,7 +3,7 @@ apellidos=["Perez", "Diaz", "Inostroza"]
 
 nombresAux = nombres.copy() # duplica la lista
 apellidosAux = [] # guarda los apellidos ordenados según el nombre de la persona
-nombresAux.sort() # ordena la lista duplicada no altera la original
+nombresAux.sort() # ordena la lista de nombres duplicada no altera la lista original
 print(nombres)
 print(apellidos)
 
