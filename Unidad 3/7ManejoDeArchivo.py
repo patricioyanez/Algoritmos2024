@@ -23,3 +23,5 @@ with open("7ManejoDeArchivo.txt",'r') as documento:
     contenido = documento.read()
 
 print(contenido)
+
+# Ejercicio: Crear un menú: 1)guardar nombres 2)listar y 3)Salir.
