@@ -1,0 +1,5 @@
+20100200-K, juan diaz, juan@duoc.cl
+20100200-K,ana diaz, ana@duoc.cl
+20100200-K, luis diaz, luis@duoc.cl
+20100200-K, ines diaz, ines@duoc.cl
+20100200-K, juan pablo diaz, juanpablo@duoc.cl
