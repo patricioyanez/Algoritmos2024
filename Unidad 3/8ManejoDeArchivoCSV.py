@@ -1,5 +1,5 @@
 import csv
-
+# csv: Valores Separados por Coma
 with open('8ManejoDeArchivoCSV.csv', 'w', newline='') as documento:
     escribir = csv.writer(documento)
 
@@ -21,5 +21,14 @@ with open('8ManejoDeArchivoCSV.csv', 'w', newline='') as documento:
 with open('8ManejoDeArchivoCSV.csv', 'r', newline='') as documento:
     datosDocumento = csv.reader(documento)
 
+# obtiene cada fila del archivo como una lista
+###    for fila in datosDocumento:
+   ###     print("parrafo:", fila) 
+
+# obtiene cada valor de cada una de las filas del documento
     for fila in datosDocumento:
-        print("parrafo:", fila) 
+        for i in range(len(fila)):
+            if i == 0:
+                print("el Rut es:", fila[i])
+
+### realizar actividad 3.3.2
