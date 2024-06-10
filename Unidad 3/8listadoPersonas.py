@@ -45,7 +45,6 @@ while opcion != "5":
         with open('8listadoPersonas.csv', 'r', newline='') as documento: 
             datosDocumento = csv.reader(documento)
             for fila in datosDocumento:
-                    edad = 2024 - int(fila[2])
-                    print(f"Rut : {fila[0]} Nombre: {fila[1]} edad: {edad} ")
+                print(f"Rut : {fila[0]} Nombre: {fila[1]} Año de Nacimiento: {fila[2]} ")
         print("Datos guardados")
         input("Presionene enter para continuar...")
