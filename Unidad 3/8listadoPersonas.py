@@ -48,3 +48,19 @@ while opcion != "5":
                 print(f"Rut : {fila[0]} Nombre: {fila[1]} Año de Nacimiento: {fila[2]} ")
         print("Datos guardados")
         input("Presionene enter para continuar...")
+    elif opcion == "4":
+        print("==== Buscar datos ====")  
+        rut = input("Ingrese rut:")
+        datoEncontrado = []
+        with open('8listadoPersonas.csv', 'r', newline='') as documento: 
+            datosDocumento = csv.reader(documento)
+            for fila in datosDocumento:
+                if fila[0] == rut:
+                    datoEncontrado = fila
+                    break
+        if len(datoEncontrado)== 0:
+            print("Rut no existe")
+        else:
+            edad = 2024 - int(fila[2])
+            print(f"Rut : {fila[0]} Nombre: {fila[1]} edad: {edad} ")
+        input("Presionene enter para continuar...")
