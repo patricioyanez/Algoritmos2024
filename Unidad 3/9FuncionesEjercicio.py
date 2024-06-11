@@ -43,6 +43,8 @@ while opcion != "5":
     except:
         print("Numero no es valido")
         input("Presione enter para continuar...")
+        continue
+
     resultado = 0
     if opcion == "1":
         resultado = sumar(numero1, numero2)
@@ -52,5 +54,6 @@ while opcion != "5":
         resultado = multiplicar(numero1, numero2)
     elif opcion == "4":
         resultado = dividir(numero1, numero2)
+    
     print("El resultado es:", resultado)
     input("Presione enter para continuar...")
