@@ -3,10 +3,14 @@
 # Crear una aplicación que permita:
 # 
 # 1.- Crear archivo
-# 2.- Guardar el rut, nombre y año de nacimiento en un archivo CSV
+# 2.- Guardar el rut, nombre y año de nacimiento en un archivo CSV 
 # 3.- Mostrar todos los datos almacenados
 # 4.- Calcular la edad de nacimiento del rut seleccionado y mostrar sus datos
 # 5.- salir
+# se pueden guardar n registros
+
+
+
 
 import os
 import csv
@@ -46,7 +50,6 @@ while opcion != "5":
             datosDocumento = csv.reader(documento)
             for fila in datosDocumento:
                 print(f"Rut : {fila[0]} Nombre: {fila[1]} Año de Nacimiento: {fila[2]} ")
-        print("Datos guardados")
         input("Presionene enter para continuar...")
     elif opcion == "4":
         print("==== Buscar datos ====")  
