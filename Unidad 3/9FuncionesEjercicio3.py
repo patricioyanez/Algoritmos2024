@@ -16,6 +16,32 @@ import os
 import csv
 opcion = ""
 
+def validarRut(rut):
+    try:
+        rut = rut.replace(".", "").replace("-", "")
+        cuerpo = rut[:-1]
+        dv = rut[-1].upper()
+
+        # Validar el cuerpo del RUT
+        if not cuerpo.isdigit():
+            return False
+
+        cuerpo = int(cuerpo)
+        
+        # Calcular el dígito verificador
+        suma = 0
+        factor = 2
+        for c in reversed(str(cuerpo)):
+            suma += int(c) * factor
+            factor = 9 if factor == 7 else factor + 1
+        
+        modulo = 11 - (suma % 11)
+        dv_calculado = {10: 'K', 11: '0'}.get(modulo, str(modulo))
+
+        return dv == dv_calculado
+    except:
+        return False
+    
 def crearArchivo():
     print("*******************************************")
     print("|========== Creación de archivo ==========|")
@@ -29,8 +55,12 @@ def registrar():
     print("|==========  Registrar Ingreso  ==========|")
     print("*******************************************")
     print("Ingrese los siguientes datos:")
-    rut = input("rut:")
-    nombre = input("nombre:")
+    rut = input("rut (20100200-k):")
+    if not validarRut(rut):
+        print("El rut no es correcto:")
+        return
+
+'''    nombre = input("nombre:")
     anio = input("año de nacimiento:")
     fila = [rut,nombre,anio]
     with open('9FuncionesEjercicio3.csv', 'a', newline='') as documento:
@@ -38,6 +68,7 @@ def registrar():
         escribir.writerow(fila)
         print("Datos guardados")
         input("Presionene enter para continuar...")
+'''
 def listar():
     pass
 def estadisticas():
@@ -68,5 +99,4 @@ while opcion != "5":
         listar()
     elif opcion == "4":
         estadisticas()
-    
-    input("Presione enter para continuar...")
+    print("Ingrese los siguientes datos:")
