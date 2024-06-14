@@ -99,4 +99,5 @@ while opcion != "5":
         listar()
     elif opcion == "4":
         estadisticas()
-    print("Ingrese los siguientes datos:")
+
+    input("Presionene enter para continuar...")
