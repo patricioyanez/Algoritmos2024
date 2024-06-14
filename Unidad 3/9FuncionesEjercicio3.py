@@ -13,12 +13,31 @@
 #   usar funciones para cada opcion y para la validación del rut
 
 import os
+import csv
 opcion = ""
 
 def crearArchivo():
-    pass
+    print("*******************************************")
+    print("|========== Creación de archivo ==========|")
+    print("*******************************************")
+    with open('9FuncionesEjercicio3.csv', 'w',newline='') as documento:
+        escribir = csv.writer(documento)
+        print("=====> Documento creado")
+
 def registrar():
-    pass
+    print("*******************************************")
+    print("|==========  Registrar Ingreso  ==========|")
+    print("*******************************************")
+    print("Ingrese los siguientes datos:")
+    rut = input("rut:")
+    nombre = input("nombre:")
+    anio = input("año de nacimiento:")
+    fila = [rut,nombre,anio]
+    with open('9FuncionesEjercicio3.csv', 'a', newline='') as documento:
+        escribir = csv.writer(documento)
+        escribir.writerow(fila)
+        print("Datos guardados")
+        input("Presionene enter para continuar...")
 def listar():
     pass
 def estadisticas():
