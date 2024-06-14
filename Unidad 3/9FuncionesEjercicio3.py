@@ -36,7 +36,6 @@ while opcion != "5":
 
     if opcion not in ['1','2','3','4','5']:
         print("Opción no válida")
-        input("Presione enter para continuar...")
     
     if opcion == "5":
         print("Aplicación Cerrada")
@@ -51,5 +50,4 @@ while opcion != "5":
     elif opcion == "4":
         estadisticas()
     
-
     input("Presione enter para continuar...")
