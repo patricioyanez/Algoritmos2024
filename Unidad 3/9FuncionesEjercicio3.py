@@ -25,15 +25,13 @@ def validarRut(rut):
         # Validar el cuerpo del RUT
         if not cuerpo.isdigit():
             return False
-
-        cuerpo = int(cuerpo)
         
         # Calcular el dígito verificador
         suma = 0
         factor = 2
         for c in reversed(str(cuerpo)):
             suma += int(c) * factor
-            factor = 9 if factor == 7 else factor + 1
+            factor = 2 if factor == 7 else factor + 1
         
         modulo = 11 - (suma % 11)
         dv_calculado = {10: 'K', 11: '0'}.get(modulo, str(modulo))
