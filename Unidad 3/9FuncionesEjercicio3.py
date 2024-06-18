@@ -77,9 +77,43 @@ def registrar():
         print("===============> Datos guardados")
 
 def listar():
-    pass
+    print("*******************************************")
+    print("|======== Listar datos registrados ========|")
+    print("*******************************************")
+    with open('9FuncionesEjercicio3.csv', 'r', newline='') as documento: 
+        datosDocumento = csv.reader(documento)
+        for fila in datosDocumento:
+            print(f"Rut : {fila[0]} Nombre: {fila[1]} Año de Nacimiento: {fila[2]} ")
+
 def estadisticas():
-    pass
+    print("*******************************************")
+    print("|======== Listar datos registrados ========|")
+    print("*******************************************")
+    with open('9FuncionesEjercicio3.csv', 'r', newline='') as documento: 
+        datosDocumento = csv.reader(documento)
+        anioActual = int(datetime.datetime.now().strftime("%Y"))
+        nino = 0
+        adolescente = 0
+        adulto = 0
+        adultoMayor = 0
+        edad = 0
+        for fila in datosDocumento:
+            edad = anioActual - int(fila[2]) 
+
+            if edad < 12:
+                nino += 1
+            elif edad < 18:
+                adolescente += 1
+            elif edad < 66:
+                adulto += 1
+            else:
+                adultoMayor += 1
+
+        print("***** Cuenta según rango etario ******")
+        print(f"Niño        : {nino}")
+        print(f"Adolescente : {adolescente}")
+        print(f"Adulto      : {adulto}")
+        print(f"Adulto Mayor: {adultoMayor}")
 
 while opcion != "5":
     os.system("cls")
