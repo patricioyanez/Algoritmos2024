@@ -55,18 +55,26 @@ def registrar():
     print("Ingrese los siguientes datos:")
     rut = input("rut (20100200-k):")
     if not validarRut(rut):
-        print("El rut no es correcto:")
+        print("El rut no es correcto")
+        return
+    nombre = input("nombre:")
+
+    if len(nombre.strip()) == 0:
+        print("Debe especificar el nombre")
         return
 
-'''    nombre = input("nombre:")
     anio = input("año de nacimiento:")
+
+    if not anio.isdigit() and int(anio) < 1900:
+        print("El año de nacimiento no es correcto")
+        return
+
     fila = [rut,nombre,anio]
     with open('9FuncionesEjercicio3.csv', 'a', newline='') as documento:
         escribir = csv.writer(documento)
         escribir.writerow(fila)
-        print("Datos guardados")
-        input("Presionene enter para continuar...")
-'''
+        print("===============> Datos guardados")
+
 def listar():
     pass
 def estadisticas():
