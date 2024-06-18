@@ -14,6 +14,7 @@
 
 import os
 import csv
+import datetime
 opcion = ""
 
 def validarRut(rut):
@@ -82,12 +83,16 @@ def estadisticas():
 
 while opcion != "5":
     os.system("cls")
-    print(""" **** Menú ****
+    print("Fecha: ", datetime.datetime.now().strftime("%d-%m-%Y"))
+    print("""       **** Menú ****
           1.- Crear archivo
           2.- RegistrarIngreso
           3.- Listar
           4.- Estadisticas
           5.- Salir""")
+
+    print(datetime.datetime.now().strftime("%Y"))
+   
     opcion = input("Ingrese opción: ")
 
     if opcion not in ['1','2','3','4','5']:
