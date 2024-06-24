@@ -15,6 +15,11 @@
 import csv
 import os
 
+def crearArchivo():
+    with open('RegistroDeProducto.csv', 'w', newline='') as doc:
+        csv.writer(doc)
+        print("==========> Archivo creado")
+
 opcion = ""
 while opcion != "6":
     os.system("cls")
@@ -32,6 +37,8 @@ while opcion != "6":
 
     if opcion == "6":
         break
-    
+
+    if opcion == "1":
+        crearArchivo()
 
     input("Presionen enter para continuar....")
