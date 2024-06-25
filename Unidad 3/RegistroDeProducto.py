@@ -3,7 +3,7 @@
 # crear menu con las siguientes opciones:
 # 
 # Crear archivo con formato csv
-# Ingresar productos (codigo de barra, nombre, marca, precio, stock)
+# Ingresar productos (codigo de barra, nombre, marca, precio, stock) 
 # Listar productos
 # Eliminar producto
 # Modificar stock actual
@@ -19,6 +19,25 @@ def crearArchivo():
     with open('RegistroDeProducto.csv', 'w', newline='') as doc:
         csv.writer(doc)
         print("==========> Archivo creado")
+
+def ingresarProducto():
+    print("======= INGRESO DE PRODUCTO ==========")
+    codigo = input("Codigo de barra : ")
+
+    if not codigo.isdigit():
+        print("============> Error: Codigo de barra no es númerico")
+        return 
+    
+    nombre = input("Nombre          : ")
+
+    if len(nombre.strip()) == 0:        
+        print("============> Error: El nombre no fue especificado")
+        return 
+
+    marca  = input("Marca           : ")
+    precio = input("Precio          : ")
+    stock  = input("Stock           : ")
+
 
 opcion = ""
 while opcion != "6":
@@ -40,5 +59,7 @@ while opcion != "6":
 
     if opcion == "1":
         crearArchivo()
+    elif opcion == "2":
+        ingresarProducto()
 
     input("Presionen enter para continuar....")
