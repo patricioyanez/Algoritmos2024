@@ -35,8 +35,27 @@ def ingresarProducto():
         return 
 
     marca  = input("Marca           : ")
+    if len(marca.strip()) == 0:        
+        print("============> Error: La marca no fue especificada")
+        return
+    
     precio = input("Precio          : ")
+    if not precio.isdigit():
+        print("============> Error: Valor del precio no es válido")
+        return 
+    
     stock  = input("Stock           : ")
+    if not stock.isdigit():
+        print("============> Error: Valor del stock no es válido")
+        return 
+# crea la lista para guardar en el archivo
+    fila = [codigo, nombre, marca, precio, stock]
+
+# guardar la lista en el archivo
+    with open('RegistroDeProducto.csv', 'a', newline='') as doc:
+        escribir = csv.writer(doc)
+        escribir.writerow(fila)        
+        print("==========> Datos guardados!!!")
 
 
 opcion = ""
