@@ -70,6 +70,32 @@ def listarProducto():
             print("Stock    : ", fila[4])
             print("------------------------------")
 
+def modificarStock():
+    print("==== Modificar stock de productos ====")
+    filasDocumento = []
+    with open('RegistroDeProducto.csv', 'r', newline='') as documento: 
+        datosDocumento = csv.reader(documento)
+        for fila in datosDocumento:
+            filasDocumento.append( fila)
+
+    codigo = input("Ingrese Codigo de barra : ")
+
+    if not codigo.isdigit():
+        print("============> Error: Codigo de barra no es númerico")
+        return 
+
+    for fila in filasDocumento:
+        if fila[0] == codigo:
+            stock = int(input("ingresar nuevo stock: "))
+            fila[4] = stock
+            print("=========> stock modificado")
+            
+    with open('RegistroDeProducto.csv', 'w', newline='') as documento: 
+        escribir = csv.writer(documento)
+        escribir.writerows(filasDocumento)
+
+def eliminarProducto():
+    pass
 
 opcion = ""
 while opcion != "6":
@@ -78,8 +104,8 @@ while opcion != "6":
     print("1.- Crear archivo")
     print("2.- Ingresar producto")
     print("3.- Listar producto")
-    print("4.- Eliminar producto")
-    print("5.- Modificar Stock")
+    print("4.- Modificar Stock")
+    print("5.- Eliminar producto")
     print("6.- Salir")
     opcion = input("Ingrese opción:")
 
@@ -95,5 +121,9 @@ while opcion != "6":
         ingresarProducto()
     elif opcion == "3":
         listarProducto()
+    elif opcion == "4":
+        modificarStock()
+    elif opcion == "5":
+        eliminarProducto()
 
     input("Presionen enter para continuar....")
