@@ -83,16 +83,16 @@ def modificarStock():
     if not codigo.isdigit():
         print("============> Error: Codigo de barra no es númerico")
         return 
-
+#987654321
     for fila in filasDocumento:
         if fila[0] == codigo:
             stock = int(input("ingresar nuevo stock: "))
             fila[4] = stock
             print("=========> stock modificado")
-            
+
     with open('RegistroDeProducto.csv', 'w', newline='') as documento: 
         escribir = csv.writer(documento)
-        escribir.writerows(filasDocumento)
+        escribir.writerows(filasDocumento) # guarda la matriz
 
 def eliminarProducto():
     pass
