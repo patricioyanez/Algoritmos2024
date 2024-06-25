@@ -57,6 +57,19 @@ def ingresarProducto():
         escribir.writerow(fila)        
         print("==========> Datos guardados!!!")
 
+def listarProducto():
+    print("==== Listado de productos ====")   
+    with open('RegistroDeProducto.csv', 'r', newline='') as documento: 
+        datosDocumento = csv.reader(documento)
+        for fila in datosDocumento:
+            print("------------------------------")
+            print("Codigo   : ", fila[0])
+            print("Nombre   : ", fila[1])
+            print("Marca    : ", fila[2])
+            print("Precio   : ", fila[3])
+            print("Stock    : ", fila[4])
+            print("------------------------------")
+
 
 opcion = ""
 while opcion != "6":
@@ -80,5 +93,7 @@ while opcion != "6":
         crearArchivo()
     elif opcion == "2":
         ingresarProducto()
+    elif opcion == "3":
+        listarProducto()
 
     input("Presionen enter para continuar....")
