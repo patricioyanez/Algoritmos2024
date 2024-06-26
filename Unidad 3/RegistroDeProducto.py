@@ -104,7 +104,35 @@ def modificarStock():
         escribir.writerows(filasDocumento) # guarda la matriz
 
 def eliminarProducto():
-    pass
+    print("==== Eliminar Producto ====")
+    filasDocumento = []
+    with open('RegistroDeProducto.csv', 'r', newline='') as documento: 
+        datosDocumento = csv.reader(documento)
+        for fila in datosDocumento:
+            filasDocumento.append( fila)
+
+    codigo = input("Ingrese Codigo de barra : ")
+
+    if not codigo.isdigit():
+        print("============> Error: Codigo de barra no es númerico")
+        return 
+#987654321
+    numeroFila = -1 # almacena el nro de fila a eliminar
+    
+    for indice in range(len(filasDocumento)):
+        if filasDocumento[indice][0] == codigo:
+            numeroFila = indice
+            break
+
+
+    if numeroFila == -1:
+        print("=====> No existe el codigo")
+    else:
+        filasDocumento.pop(numeroFila) # elimina la fila de la matriz
+        with open('RegistroDeProducto.csv', 'w', newline='') as documento: 
+            escribir = csv.writer(documento)
+            escribir.writerows(filasDocumento) # guarda la matriz
+            print("=====> Producto Eliminado")
 
 opcion = ""
 while opcion != "6":
